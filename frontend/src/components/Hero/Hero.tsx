@@ -6,9 +6,9 @@ function Hero() {
 
       <div className="hero-content">
 
-        <span className="hero-tag">
+        <p className="eyebrow">
           DISTRIBUIDOR AUTORIZADO • SOLUCIONES MOVISTAR
-        </span>
+        </p>
 
         <h1>
           Conectamos empresas
@@ -17,81 +17,94 @@ function Hero() {
           <span> telecomunicaciones</span>
         </h1>
 
-        <p>
+
+        <p className="description">
           Instalación, soporte técnico y operaciones de conectividad
           para empresas que necesitan servicios confiables.
         </p>
 
 
-        <div className="hero-buttons">
-          <button className="btn-primary">
+        <div className="buttons">
+
+          <button className="primary">
             Solicitar servicio →
           </button>
 
-          <button className="btn-secondary">
+          <button className="secondary">
             Conocer empresa
           </button>
+
         </div>
 
 
-        <div className="services-mini">
+        <div className="services">
 
-          <div>
-            <strong>⚡ Instalación</strong>
-            <small>
-              Despliegue y activación de servicios
-            </small>
+          <article>
+            <h3>Instalación</h3>
+            <p>
+              Despliegue técnico y activación de servicios.
+            </p>
+          </article>
+
+
+          <article>
+            <h3>Soporte técnico</h3>
+            <p>
+              Atención especializada para continuidad operativa.
+            </p>
+          </article>
+
+
+          <article>
+            <h3>Operaciones</h3>
+            <p>
+              Gestión técnica y mantenimiento.
+            </p>
+          </article>
+
+
+        </div>
+
+
+      </div>
+
+
+
+      <div className="hero-right">
+
+        <div className="image-placeholder">
+
+          <div className="floating-card">
+
+            <div className="movistar">
+              M
+            </div>
+
+            <strong>
+              +30
+            </strong>
+
+            <p>
+              técnicos especializados
+            </p>
+
+
+            <ul>
+              <li>Instalación</li>
+              <li>Soporte técnico</li>
+              <li>Operaciones</li>
+              <li>Cobertura nacional</li>
+            </ul>
+
+
           </div>
 
-          <div>
-            <strong>⚙ Soporte técnico</strong>
-            <small>
-              Atención especializada
-            </small>
-          </div>
-
-          <div>
-            <strong>👥 Operaciones</strong>
-            <small>
-              Gestión y mantenimiento
-            </small>
-          </div>
 
         </div>
 
 
       </div>
 
-
-
-      <div className="hero-visual">
-
-        <div className="movistar-card">
-
-          <div className="movistar-logo">
-            M
-          </div>
-
-          <h3>
-            +30
-          </h3>
-
-          <p>
-            técnicos especializados
-          </p>
-
-
-          <ul>
-            <li>✓ Instalación</li>
-            <li>✓ Soporte técnico</li>
-            <li>✓ Operaciones</li>
-            <li>✓ Cobertura nacional</li>
-          </ul>
-
-        </div>
-
-
-      </div>
 
 
     </section>
