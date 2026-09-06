@@ -1,31 +1,11 @@
-import { motion } from "framer-motion";
-import {
-  RadioTower,
-  Headset,
-  Settings,
-  MapPin,
-} from "lucide-react";
-
 import "./Hero.css";
 
+import { motion } from "framer-motion";
 
-const services = [
-  {
-    icon: <RadioTower size={22} />,
-    title: "Instalación",
-    text: "Despliegue técnico y activación de servicios.",
-  },
-  {
-    icon: <Headset size={22} />,
-    title: "Soporte técnico",
-    text: "Atención especializada para continuidad operativa.",
-  },
-  {
-    icon: <Settings size={22} />,
-    title: "Operaciones",
-    text: "Gestión técnica y mantenimiento.",
-  },
-];
+import {
+  MapPin,
+  Network,
+} from "lucide-react";
 
 
 export default function Hero() {
@@ -34,111 +14,125 @@ export default function Hero() {
 
     <section className="hero">
 
+
       <div className="hero-grid"></div>
 
 
+
       <motion.div
-        className="hero-container"
-        initial={{opacity:0, y:30}}
-        animate={{opacity:1,y:0}}
-        transition={{duration:0.8}}
+
+        className="hero-content"
+
+        initial={{
+          opacity:0,
+          y:30
+        }}
+
+        animate={{
+          opacity:1,
+          y:0
+        }}
+
+        transition={{
+          duration:0.8
+        }}
+
       >
 
 
-        <div className="hero-content">
+        <div className="hero-tag">
 
+          <span></span>
 
-          <div className="hero-label">
+          DISTRIBUIDOR AUTORIZADO MOVISTAR
 
-            <span className="status-dot"></span>
-
-            DISTRIBUIDOR AUTORIZADO MOVISTAR
-
-          </div>
+        </div>
 
 
 
-          <h1>
 
-            Conectamos empresas
-            <br/>
+        <h1>
 
-            con soluciones de
+          Conectamos empresas
 
-            <span>
-              telecomunicaciones
-            </span>
+          <br />
 
-          </h1>
+          con soluciones de
 
+          <span>
+            telecomunicaciones
+          </span>
 
-
-          <p className="hero-description">
-
-            Instalación, soporte técnico y operaciones
-            de conectividad para empresas que necesitan
-            servicios confiables.
-
-          </p>
+        </h1>
 
 
 
-          <div className="hero-buttons">
 
-            <button className="primary-btn">
-              Solicitar servicio →
-            </button>
+        <p>
 
+          Instalación, soporte técnico y operaciones de conectividad
 
-            <button className="secondary-btn">
-              Conocer empresa
-            </button>
+          para empresas que necesitan servicios confiables.
 
-          </div>
+        </p>
 
 
 
-          <div className="service-list">
 
 
-            {
-              services.map((item,index)=>(
-
-                <motion.div
-
-                  className="service-card"
-
-                  key={index}
-
-                  whileHover={{
-                    y:-6
-                  }}
-
-                >
-
-                  <div className="service-icon">
-                    {item.icon}
-                  </div>
+        <div className="hero-actions">
 
 
-                  <h3>
-                    {item.title}
-                  </h3>
+          <button className="primary-btn">
+
+            Solicitar servicio →
+
+          </button>
 
 
-                  <p>
-                    {item.text}
-                  </p>
+
+          <button className="secondary-btn">
+
+            Conocer empresa
+
+          </button>
 
 
-                </motion.div>
-
-              ))
-            }
+        </div>
 
 
-          </div>
+      </motion.div>
 
+
+
+
+
+
+      <motion.div
+
+        className="hero-operation"
+
+        initial={{
+          opacity:0,
+          scale:.9
+        }}
+
+        animate={{
+          opacity:1,
+          scale:1
+        }}
+
+        transition={{
+          duration:1
+        }}
+
+      >
+
+
+
+        <div className="network-lines">
+
+          <Network/>
 
         </div>
 
@@ -146,58 +140,54 @@ export default function Hero() {
 
 
 
-        <motion.div
-
-          className="operation-card"
-
-          initial={{
-            opacity:0,
-            x:40
-          }}
-
-          animate={{
-            opacity:1,
-            x:0
-          }}
-
-          transition={{
-            delay:.3,
-            duration:.8
-          }}
-
-        >
+        <div className="operation-card">
 
 
-          <div className="movistar-mark">
+
+          <div className="movistar-badge">
+
             M
+
           </div>
 
 
 
+
           <strong>
+
             +30
+
           </strong>
 
 
+
+
           <p>
-            técnicos especializados
+
+            Especialistas técnicos
+
           </p>
+
 
 
 
           <ul>
 
+
             <li>
               Instalación
             </li>
+
 
             <li>
               Soporte técnico
             </li>
 
+
             <li>
               Operaciones
             </li>
+
 
             <li>
               Cobertura nacional
@@ -208,20 +198,26 @@ export default function Hero() {
 
 
 
-          <div className="coverage">
 
-            <MapPin size={16}/>
+
+          <div className="operation-footer">
+
+
+            <MapPin size={17}/>
+
 
             Operación técnica
+
 
           </div>
 
 
-        </motion.div>
 
+        </div>
 
 
       </motion.div>
+
 
 
     </section>

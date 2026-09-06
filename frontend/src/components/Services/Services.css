@@ -1,0 +1,238 @@
+.services-section{
+
+    padding:120px 60px;
+
+    background:
+    linear-gradient(
+        180deg,
+        #ffffff,
+        #f8fbff
+    );
+
+}
+
+
+.services-header{
+
+    max-width:700px;
+
+    margin-bottom:70px;
+
+}
+
+
+.services-tag{
+
+    display:inline-block;
+
+    color:#0099ff;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    letter-spacing:4px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.services-header h2{
+
+    font-size:52px;
+
+    line-height:1.1;
+
+    color:#07133a;
+
+    margin:0;
+
+    font-weight:800;
+
+}
+
+
+.services-header h2 span{
+
+    color:#0099ff;
+
+}
+
+
+
+.services-header p{
+
+    margin-top:25px;
+
+    font-size:18px;
+
+    color:#64748b;
+
+    max-width:600px;
+
+    line-height:1.6;
+
+}
+
+
+
+
+.services-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:25px;
+
+}
+
+
+
+.service-box{
+
+    position:relative;
+
+    background:white;
+
+    border:1px solid #e5edf7;
+
+    border-radius:24px;
+
+    padding:35px 30px;
+
+    min-height:280px;
+
+    transition:.3s;
+
+    overflow:hidden;
+
+}
+
+
+
+.service-box:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+    0 20px 50px rgba(0,153,255,.12);
+
+}
+
+
+
+.service-icon{
+
+    width:60px;
+
+    height:60px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:16px;
+
+    background:#eaf6ff;
+
+    color:#0099ff;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.service-box h3{
+
+    color:#07133a;
+
+    font-size:22px;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.service-box p{
+
+    color:#64748b;
+
+    line-height:1.6;
+
+    font-size:15px;
+
+}
+
+
+
+.service-line{
+
+    position:absolute;
+
+    bottom:0;
+
+    left:0;
+
+    height:4px;
+
+    width:0;
+
+    background:#0099ff;
+
+    transition:.4s;
+
+}
+
+
+.service-box:hover .service-line{
+
+    width:100%;
+
+}
+
+
+
+@media(max-width:1000px){
+
+.services-grid{
+
+grid-template-columns:
+repeat(2,1fr);
+
+}
+
+}
+
+
+
+@media(max-width:600px){
+
+.services-section{
+
+padding:80px 25px;
+
+}
+
+
+.services-header h2{
+
+font-size:38px;
+
+}
+
+
+.services-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
