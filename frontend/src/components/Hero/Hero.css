@@ -1,63 +1,183 @@
 .hero {
-  min-height: 100vh;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:70px;
-  background:
-  radial-gradient(circle at 85% 20%, #e6ffe9, transparent 25%),
-  radial-gradient(circle at 70% 80%, #dcefff, transparent 35%),
-  #ffffff;
+
+min-height:100vh;
+
+position:relative;
+
+overflow:hidden;
+
+background:
+
+radial-gradient(
+circle at 80% 30%,
+rgba(0,153,255,.15),
+transparent 30%
+),
+
+radial-gradient(
+circle at 90% 80%,
+rgba(0,255,120,.10),
+transparent 25%
+),
+
+#ffffff;
+
+
 }
+
+
+
+.hero-grid{
+
+position:absolute;
+
+inset:0;
+
+background-image:
+
+linear-gradient(
+rgba(0,153,255,.05) 1px,
+transparent 1px
+),
+
+linear-gradient(
+90deg,
+rgba(0,153,255,.05) 1px,
+transparent 1px
+);
+
+
+background-size:
+80px 80px;
+
+mask-image:
+linear-gradient(
+to bottom,
+black,
+transparent
+);
+
+}
+
+
+
+.hero-container{
+
+position:relative;
+
+z-index:2;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:120px 70px 60px;
+
+gap:50px;
+
+}
+
+
 
 
 .hero-content{
- width:55%;
+
+max-width:750px;
+
 }
 
 
-.eyebrow{
- color:#0078d7;
- font-size:14px;
- letter-spacing:4px;
- font-weight:700;
- margin-bottom:35px;
+
+
+.hero-label{
+
+display:flex;
+
+align-items:center;
+
+gap:12px;
+
+font-size:14px;
+
+letter-spacing:5px;
+
+font-weight:700;
+
+color:#0078d7;
+
+margin-bottom:40px;
+
 }
+
+
+
+.status-dot{
+
+width:10px;
+
+height:10px;
+
+background:#7bd600;
+
+border-radius:50%;
+
+box-shadow:
+0 0 15px #7bd600;
+
+}
+
+
 
 
 .hero h1{
- font-size:74px;
- line-height:.96;
- font-weight:800;
- color:#071633;
+
+font-size:
+
+clamp(48px,5vw,78px);
+
+line-height:0.98;
+
+font-weight:900;
+
+letter-spacing:-3px;
+
+color:#071433;
+
+margin:0;
+
 }
+
 
 
 .hero h1 span{
- color:#0099ff;
+
+display:block;
+
+color:#0099ff;
+
 }
 
 
 
-.description{
-
-margin-top:25px;
+.hero-description{
 
 font-size:20px;
 
-line-height:1.5;
+line-height:1.6;
 
-color:#52657a;
+color:#58708f;
 
-max-width:620px;
+max-width:600px;
+
+margin:35px 0;
 
 }
 
 
 
-.buttons{
-
-margin-top:35px;
+.hero-buttons{
 
 display:flex;
 
@@ -67,7 +187,28 @@ gap:18px;
 
 
 
-.primary{
+.primary-btn,
+.secondary-btn{
+
+height:52px;
+
+padding:0 32px;
+
+border-radius:10px;
+
+font-size:16px;
+
+font-weight:700;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+
+
+.primary-btn{
 
 background:#0099ff;
 
@@ -75,38 +216,40 @@ color:white;
 
 border:none;
 
-padding:16px 35px;
+}
 
-border-radius:12px;
 
-font-weight:700;
+
+.primary-btn:hover{
+
+transform:translateY(-3px);
+
+box-shadow:
+0 15px 35px rgba(0,153,255,.35);
 
 }
 
 
-.secondary{
+
+
+.secondary-btn{
 
 background:white;
 
-border:2px solid #75d000;
+border:2px solid #7bd600;
 
-color:#0066cc;
-
-padding:16px 35px;
-
-border-radius:12px;
-
-font-weight:700;
+color:#0754a6;
 
 }
 
 
 
-.services{
+
+.service-list{
 
 display:flex;
 
-gap:20px;
+gap:22px;
 
 margin-top:55px;
 
@@ -114,86 +257,88 @@ margin-top:55px;
 
 
 
-.services article{
 
-width:180px;
+.service-card{
 
 background:white;
 
-padding:22px;
+width:190px;
+
+padding:25px;
 
 border-radius:18px;
 
-border:1px solid #edf3fa;
+border:1px solid #e5eef8;
 
-box-shadow:0 15px 35px rgba(0,0,0,.08);
-
-}
-
-
-
-.services h3{
-
-font-size:17px;
-
-color:#071633;
+box-shadow:
+0 15px 40px rgba(0,40,80,.08);
 
 }
 
 
 
-.services p{
+.service-icon{
 
-font-size:15px;
+color:#0099ff;
 
-color:#607080;
+margin-bottom:15px;
 
-line-height:1.4;
+}
+
+
+
+.service-card h3{
+
+margin:0 0 10px;
+
+color:#071433;
+
+font-size:18px;
+
+}
+
+
+
+.service-card p{
+
+margin:0;
+
+color:#60738d;
+
+line-height:1.5;
 
 }
 
 
 
 
-.hero-right{
 
-width:35%;
+.operation-card{
 
-display:flex;
-
-justify-content:center;
-
-}
-
-
-
-.floating-card{
+width:320px;
 
 background:white;
 
-width:300px;
+border-radius:30px;
 
-padding:35px;
+padding:40px;
 
-border-radius:28px;
+box-shadow:
 
-box-shadow:0 30px 70px rgba(0,130,255,.18);
+0 30px 80px rgba(0,120,255,.18);
 
-border:1px solid #d9ecff;
+border:1px solid #dcecff;
 
 }
 
 
 
-.movistar{
 
-background:#74d000;
+.movistar-mark{
 
 width:45px;
 
 height:45px;
-
-border-radius:12px;
 
 display:flex;
 
@@ -201,39 +346,48 @@ align-items:center;
 
 justify-content:center;
 
-font-weight:800;
-
-font-size:24px;
+background:#7bd600;
 
 color:white;
 
+font-weight:900;
+
+font-size:22px;
+
+border-radius:12px;
+
 }
 
 
 
-.floating-card strong{
+
+.operation-card strong{
 
 display:block;
 
-font-size:60px;
+font-size:65px;
 
-margin-top:25px;
+color:#071433;
 
-color:#071633;
+margin-top:30px;
 
 }
 
 
-.floating-card p{
 
-color:#607080;
+
+.operation-card p{
+
+color:#61758d;
 
 font-size:18px;
 
 }
 
 
-.floating-card ul{
+
+
+.operation-card ul{
 
 padding:0;
 
@@ -242,12 +396,62 @@ list-style:none;
 }
 
 
-.floating-card li{
 
-margin:14px 0;
+.operation-card li{
 
-color:#0078d7;
+margin:16px 0;
+
+color:#0078df;
 
 font-weight:600;
+
+}
+
+
+
+
+.coverage{
+
+margin-top:30px;
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+color:#071433;
+
+font-weight:700;
+
+}
+
+
+
+
+@media(max-width:900px){
+
+
+.hero-container{
+
+flex-direction:column;
+
+padding:100px 25px;
+
+}
+
+
+.service-list{
+
+flex-direction:column;
+
+}
+
+
+.operation-card{
+
+width:100%;
+
+}
 
 }

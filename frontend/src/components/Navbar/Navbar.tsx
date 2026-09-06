@@ -1,43 +1,43 @@
 import "./Navbar.css";
 
-function Navbar(){
+const Navbar = () => {
+  return (
+    <header className="navbar">
+      <div className="navbar-container">
 
-return(
+        <div className="brand">
+          <div className="brand-icon">
+            LP
+          </div>
 
-<header className="navbar">
+          <div className="brand-text">
+            <h1>
+              LINK POINT
+            </h1>
 
-<div className="brand">
-
-<div className="logo-link">
-LINK POINT
-</div>
-
-<span>
-CONTACT E.I.R.L.
-</span>
-
-</div>
-
-
-<nav>
-
-<a className="active">Inicio</a>
-<a>Servicios</a>
-<a>Empresa</a>
-<a>Contacto</a>
-
-</nav>
+            <span>
+              SOLUCIONES EMPRESARIALES
+            </span>
+          </div>
+        </div>
 
 
-<button className="whatsapp">
-🟢 Cotiza por WhatsApp
-</button>
+        <nav className="nav-links">
+          <a href="#inicio">Inicio</a>
+          <a href="#servicios">Servicios</a>
+          <a href="#empresa">Empresa</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
 
 
-</header>
+        <button className="nav-button">
+          Solicitar servicio
+        </button>
 
-)
 
-}
+      </div>
+    </header>
+  );
+};
 
 export default Navbar;

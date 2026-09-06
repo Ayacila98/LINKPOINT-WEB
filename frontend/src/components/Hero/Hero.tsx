@@ -1,100 +1,140 @@
+import { motion } from "framer-motion";
+import {
+  RadioTower,
+  Headset,
+  Settings,
+  MapPin,
+} from "lucide-react";
+
 import "./Hero.css";
 
-function Hero() {
+
+const services = [
+  {
+    icon: <RadioTower size={22} />,
+    title: "Instalación",
+    text: "Despliegue técnico y activación de servicios.",
+  },
+  {
+    icon: <Headset size={22} />,
+    title: "Soporte técnico",
+    text: "Atención especializada para continuidad operativa.",
+  },
+  {
+    icon: <Settings size={22} />,
+    title: "Operaciones",
+    text: "Gestión técnica y mantenimiento.",
+  },
+];
+
+
+export default function Hero() {
+
   return (
+
     <section className="hero">
 
-      <div className="hero-content">
-
-        <p className="eyebrow">
-          DISTRIBUIDOR AUTORIZADO • SOLUCIONES MOVISTAR
-        </p>
-
-        <h1>
-          Conectamos empresas
-          <br />
-          con soluciones de
-          <span> telecomunicaciones</span>
-        </h1>
+      <div className="hero-grid"></div>
 
 
-        <p className="description">
-          Instalación, soporte técnico y operaciones de conectividad
-          para empresas que necesitan servicios confiables.
-        </p>
+      <motion.div
+        className="hero-container"
+        initial={{opacity:0, y:30}}
+        animate={{opacity:1,y:0}}
+        transition={{duration:0.8}}
+      >
 
 
-        <div className="buttons">
-
-          <button className="primary">
-            Solicitar servicio →
-          </button>
-
-          <button className="secondary">
-            Conocer empresa
-          </button>
-
-        </div>
+        <div className="hero-content">
 
 
-        <div className="services">
+          <div className="hero-label">
 
-          <article>
-            <h3>Instalación</h3>
-            <p>
-              Despliegue técnico y activación de servicios.
-            </p>
-          </article>
+            <span className="status-dot"></span>
 
+            DISTRIBUIDOR AUTORIZADO MOVISTAR
 
-          <article>
-            <h3>Soporte técnico</h3>
-            <p>
-              Atención especializada para continuidad operativa.
-            </p>
-          </article>
-
-
-          <article>
-            <h3>Operaciones</h3>
-            <p>
-              Gestión técnica y mantenimiento.
-            </p>
-          </article>
-
-
-        </div>
-
-
-      </div>
+          </div>
 
 
 
-      <div className="hero-right">
+          <h1>
 
-        <div className="image-placeholder">
+            Conectamos empresas
+            <br/>
 
-          <div className="floating-card">
+            con soluciones de
 
-            <div className="movistar">
-              M
-            </div>
+            <span>
+              telecomunicaciones
+            </span>
 
-            <strong>
-              +30
-            </strong>
-
-            <p>
-              técnicos especializados
-            </p>
+          </h1>
 
 
-            <ul>
-              <li>Instalación</li>
-              <li>Soporte técnico</li>
-              <li>Operaciones</li>
-              <li>Cobertura nacional</li>
-            </ul>
+
+          <p className="hero-description">
+
+            Instalación, soporte técnico y operaciones
+            de conectividad para empresas que necesitan
+            servicios confiables.
+
+          </p>
+
+
+
+          <div className="hero-buttons">
+
+            <button className="primary-btn">
+              Solicitar servicio →
+            </button>
+
+
+            <button className="secondary-btn">
+              Conocer empresa
+            </button>
+
+          </div>
+
+
+
+          <div className="service-list">
+
+
+            {
+              services.map((item,index)=>(
+
+                <motion.div
+
+                  className="service-card"
+
+                  key={index}
+
+                  whileHover={{
+                    y:-6
+                  }}
+
+                >
+
+                  <div className="service-icon">
+                    {item.icon}
+                  </div>
+
+
+                  <h3>
+                    {item.title}
+                  </h3>
+
+
+                  <p>
+                    {item.text}
+                  </p>
+
+
+                </motion.div>
+
+              ))
+            }
 
 
           </div>
@@ -103,12 +143,89 @@ function Hero() {
         </div>
 
 
-      </div>
 
+
+
+        <motion.div
+
+          className="operation-card"
+
+          initial={{
+            opacity:0,
+            x:40
+          }}
+
+          animate={{
+            opacity:1,
+            x:0
+          }}
+
+          transition={{
+            delay:.3,
+            duration:.8
+          }}
+
+        >
+
+
+          <div className="movistar-mark">
+            M
+          </div>
+
+
+
+          <strong>
+            +30
+          </strong>
+
+
+          <p>
+            técnicos especializados
+          </p>
+
+
+
+          <ul>
+
+            <li>
+              Instalación
+            </li>
+
+            <li>
+              Soporte técnico
+            </li>
+
+            <li>
+              Operaciones
+            </li>
+
+            <li>
+              Cobertura nacional
+            </li>
+
+
+          </ul>
+
+
+
+          <div className="coverage">
+
+            <MapPin size={16}/>
+
+            Operación técnica
+
+          </div>
+
+
+        </motion.div>
+
+
+
+      </motion.div>
 
 
     </section>
-  );
-}
 
-export default Hero;
+  );
+
+}
